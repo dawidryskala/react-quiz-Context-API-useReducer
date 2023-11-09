@@ -1,4 +1,4 @@
-# 📟 React Quiz Manager with useReducer 📚
+# 📟 React Quiz Manager with Context API and useReducer 📚
 
 ## Description:
 React Quiz Manager is a React-based web application that facilitates quiz management. It employs the useReducer hook for state management. This project allows users to answer questions, track their progress, and provides a timer. Explore your React knowledge while enjoying this quiz!
