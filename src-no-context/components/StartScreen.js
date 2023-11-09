@@ -1,9 +1,6 @@
 // rfc snippet  react functional component
-import { useQuestions } from "../contexts/QueastionsContext";
 
-function StartScreen() {
-  const { numQuestions, dispatch } = useQuestions();
-
+function StartScreen({ numQuestions, dispatch }) {
   return (
     <div className="start">
       <h2>Welcome to The React Quiz!</h2>

@@ -1,7 +1,14 @@
-function NextButton({ dispatch, answer, index, numQueastions }) {
-  if (answer === null) return null;
+import { useQuestions } from "../contexts/QueastionsContext";
 
-  if (index < numQueastions - 1)
+function NextButton() {
+  const { dispatch, answer, index, numQuestios } = useQuestions();
+
+  // console.log("answer in NextButton Component    " + answer);
+  console.log("numQuestios   " + numQuestios);
+
+  if (answer === "") return null;
+
+  if (index < numQuestios - 1)
     return (
       <button
         className="btn btn-ui"
@@ -11,7 +18,7 @@ function NextButton({ dispatch, answer, index, numQueastions }) {
       </button>
     );
 
-  if (index === numQueastions - 1)
+  if (index === numQuestios - 1)
     return (
       <button
         className="btn btn-ui"

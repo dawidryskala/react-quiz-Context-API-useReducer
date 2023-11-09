@@ -1,11 +1,5 @@
-// import { useEffect, useState } from "react";
-import { useQuestions } from "../contexts/QueastionsContext";
-
-function Option() {
-  const { question, dispatch, answer } = useQuestions();
-
-  const hasAnswered = answer !== "";
-  // console.log("hasAnswered in Option component    " + hasAnswered);
+function Option({ question, dispatch, answer }) {
+  const hasAnswered = answer !== null;
 
   return (
     <div className="option">
@@ -22,7 +16,7 @@ function Option() {
               : ""
           }`}
           key={option}
-          disabled={answer !== ""}
+          disabled={answer !== null}
           onClick={() => dispatch({ type: "newAnswer", payload: index })}
         >
           {option}

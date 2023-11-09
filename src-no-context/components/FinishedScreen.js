@@ -1,8 +1,4 @@
-import { useQuestions } from "../contexts/QueastionsContext";
-
-function FinishedScreen() {
-  const { points, maxPossiblePoints, highscore, dispatch } = useQuestions();
-
+function FinishedScreen({ points, maxPossiblePoints, highscore, dispatch }) {
   const percentage = (points / maxPossiblePoints) * 100;
   console.log(points);
   console.log(maxPossiblePoints);

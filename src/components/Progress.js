@@ -1,11 +1,21 @@
-function Progress({ index, numQueastios, points, maxPossiblePoints, answer }) {
+import { useQuestions } from "../contexts/QueastionsContext";
+
+function Progress() {
+  const { index, numQuestios, points, maxPossiblePoints, answer } =
+    useQuestions();
+  console.log("numQuestios  " + numQuestios);
+  console.log("index  " + index);
+  console.log("points  " + points);
+  console.log("maxPossiblePoints  " + maxPossiblePoints);
+  console.log("answer  " + answer);
+
   return (
     <header className="progress">
       {/* Number(true) => 1  and Number(false) => 0*/}
-      <progress max={numQueastios} value={index + Number(answer !== null)} />
+      <progress max={numQuestios} value={index + Number(answer !== "")} />
 
       <p>
-        Queastion <strong>{index + 1}</strong> / {numQueastios}
+        Queastion <strong>{index + 1}</strong> / {numQuestios}
       </p>
 
       <p>
